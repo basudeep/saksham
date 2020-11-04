@@ -1,0 +1,717 @@
+/* 1) HEADER CSS 
+   2) HERO CSS
+   3) ABOUT CSS
+   4) BRAND CSS
+   5) CATEGORIES CSS
+   6) FOOTER CSS
+
+*/
+/* html {
+    cursor: url("data:image/svg+xml,%3Csvg height='6' width='6' viewBox='0 0 8 8' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='4' cy='4' fill='%23eee' r='4'/%3E%3C/svg%3E") 3 3, auto;
+} */
+html{
+    cursor: none;
+    overflow-x: hidden;
+}
+body {
+    font-family: 'Gotham';
+    font-size: 18px;
+
+}
+
+/* .cursor {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: var(--width);
+    height: var(--height);
+    transform: translate(calc(var(--x) - var(--width) / 2), calc(var(--y) - var(--height) / 2));
+    transition: 150ms width cubic-bezier(0.39, 0.575, 0.565, 1),
+        150ms height cubic-bezier(0.39, 0.575, 0.565, 1),
+        150ms transform cubic-bezier(0.39, 0.575, 0.565, 1);
+    z-index: 1;
+    pointer-events: none;
+    will-change: transform;
+}
+
+@media (pointer: fine) {
+    .cursor {
+        display: block;
+    }
+}
+
+.cursor::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: var(--radius);
+    border: 3px solid #b7974b;
+    opacity: var(--scale);
+    -webkit-transform: scale(var(--scale));
+    transform: scale(var(--scale));
+    transition: 300ms opacity cubic-bezier(0.39, 0.575, 0.565, 1),
+        300ms transform cubic-bezier(0.39, 0.575, 0.565, 1),
+        150ms border-radius cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+
+html:not(html:hover) .cursor::after {
+    opacity: 0;
+    transform: scale(0);
+} */
+
+
+.cursor {
+    position: absolute;
+    background: #202147;
+    width: 8px;
+    height: 8px;
+    border-radius: 100%;
+    z-index: 1;
+    transition: 0.5s cubic-bezier(0.75, -1.27, 0.3, 2.33) transform,
+        0.2s cubic-bezier(0.75, -1.27, 0.3, 2.33) opacity;
+    user-select: none;
+    pointer-events: none;
+    transform: scale(0.8);
+}
+
+.cursor::before {
+    content: "View";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 2px;
+    text-align: center;
+    color: #fff;
+    line-height: 8px;
+    display: block;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 100%;
+    opacity: 0;
+}
+
+.cursor.active {
+    opacity: 1;
+    transform: scale(12);
+}
+
+.cursor.active::before {
+    opacity: 1;
+}
+
+.cursor-follower {
+    position: absolute;
+    background:#b7974b8a;
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    z-index: 1;
+    transition: 0.6s cubic-bezier(0.75, -1.27, 0.3, 2.33) transform,
+        0.4s cubic-bezier(0.75, -1.27, 0.3, 2.33) opacity;
+    user-select: none;
+    pointer-events: none;
+    transform: translate(4px, 4px);
+}
+
+.cursor-follower.active {
+    opacity: 0.3;
+    transform: scale(0);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+ul li {
+    list-style: none;
+}
+
+.theme-color {
+    color: #b7974b;
+}
+
+.theme-bg {
+    background: #b7974b;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+.section-title {
+    position: absolute;
+    top: -107px;
+}
+
+.section-title img {
+    width: 510px;
+    height: 638px;
+}
+
+.section-title span {
+    font-size: 190px;
+    color: #b7974b;
+}
+
+
+
+
+
+/* ================== HEADER CSS =========================*/
+a.navbar-brand img {
+    max-width: 360px;
+}
+
+a.top-shop {
+    padding: 25px 30px;
+    right: 0;
+    position: absolute;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    font-size: 20px;
+}
+
+.top-search {
+    position: absolute;
+    right: 340px;
+}
+
+.top-search input {
+    border-radius: 50px;
+    border: 1px solid #b7974b;
+    height: 65px;
+    width: 260px;
+    color: #fff;
+    font-size: 20px;
+    padding-left: 55px;
+    background: transparent;
+}
+
+ul.navbar-nav {
+    margin-bottom: -160px;
+}
+
+ul.navbar-nav li a {
+    color: #b7974b;
+}
+
+.text {
+    position: relative;
+}
+
+.text i {
+    color: #b7974b;
+    position: absolute;
+    left: 20px;
+    font-size: 25px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* ================== HERO CSS =========================*/
+
+.wrapper.no-gutters {
+    height: 1000px;
+}
+
+.single-hero {
+    height: 1000px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.hero-right {
+    background: #202147;
+    height: 100%;
+    border-left: 10px solid #B7974B;
+}
+
+.slider-content {
+    top: 50%;
+    left: 108%;
+    z-index: 99;
+    width: 580px;
+    transform: translateY(-50%);
+}
+
+.slider-content h1 {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 75px;
+    line-height: 95px;
+    letter-spacing: 14px;
+}
+
+.slider-content a {
+    padding: 10px;
+}
+
+.slider-content a:hover {
+    color: #B7974B;
+}
+
+/* ================== ABOUT CSS =========================*/
+
+.about-content {
+    margin-top: 180px;
+}
+
+.about-content h2 {
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.about-content p {
+    color: #726e6d;
+    font-size: 32px;
+}
+
+.about .section-title {
+    left: 20px;
+    top: -177px;
+}
+
+/* .about .section-title img {
+    height: 640px;
+    max-width: 500px;
+} */
+.about-video {
+    margin-top: 380px;
+}
+
+.about-video {
+    max-width: 80%;
+}
+
+.about-video .section-title {
+    position: absolute;
+    left: 90%;
+    top: -185px;
+}
+
+/* .about-video .section-title img {
+    height: 350px;
+} */
+.play-btn {
+    left: 50%;
+    top: 50%;
+    color: #fff;
+    transform: translate(-50%, -50%);
+}
+
+.play-btn i {
+    font-size: 80px;
+}
+
+.about-video .line {
+    position: absolute;
+    right: 260px;
+    height: 500px;
+    width: 3px;
+    background: #b7974b;
+    top: 60px;
+}
+
+.arrow {
+    margin-top: 110px;
+    margin-bottom: 70px;
+}
+
+/* ================== ABOUT CSS =========================*/
+.brand h2 {
+    color: #000;
+    font-size: 50px;
+    letter-spacing: 20px;
+    margin-bottom: 70px;
+    font-weight: 500;
+}
+
+
+.brand-two {
+    padding: 250px 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-top: 250px;
+
+}
+
+.brand-two .section-title {
+    position: absolute;
+    left: 13%;
+    top: -147px;
+}
+
+.brand-two .line {
+    position: absolute;
+    left: 114%;
+    height: 500px;
+    width: 3px;
+    background: #b7974b;
+    top: 60px;
+}
+
+
+
+/* ================== CATEGORIES CSS =========================*/
+section.categories .section-title {
+    top: -165px;
+}
+
+.categories {
+    padding-top: 210px;
+}
+
+li.single-list h3 {
+    font-size: 48px;
+    color: #797675;
+    line-height: 40px;
+    font-weight: 500;
+}
+
+li.single-list {
+    margin-bottom: 50px;
+}
+
+li.single-list p {
+    color: #797675;
+    line-height: 24px;
+    font-weight: 500;
+}
+
+li.single-list a {
+    color: #252322;
+    font-size: 22px;
+    font-weight: 700;
+    padding: 10px;
+}
+
+.category-image {
+    margin-bottom: 30px;
+}
+
+.brand-text {
+    margin-top: 510px;
+}
+
+.catborder:before {
+    position: absolute;
+    content: '';
+    height: 100%;
+    left: -45px;
+    background: #b7974b;
+    width: 5px;
+}
+
+.category-image.m-negetive {
+    margin-top: -40px;
+}
+
+/* BLUE BUTTON */
+
+a.blue-btn {
+    background: #1B274C;
+    padding: 12px 28px;
+    width: 230px;
+    display: block;
+    line-height: 1;
+    text-align: center;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+a.blue-btn span {
+    position: relative;
+    display: inline-block;
+}
+
+a.blue-btn span:after {
+    position: absolute;
+    content: '';
+    height: 35px;
+    width: 1px;
+    right: -40px;
+    background: #1B274C;
+    top: 0;
+    transition: .4s;
+}
+
+a.blue-btn span:before {
+    position: absolute;
+    content: '';
+    height: 35px;
+    width: 1px;
+    left: -40px;
+    background: #1B274C;
+    top: 0;
+    transition: .4s;
+}
+
+a.blue-btn:hover span:after {
+    right: -10px;
+    background: #b7974b;
+}
+
+a.blue-btn:hover span:before {
+    left: -10px;
+    background: #b7974b;
+}
+
+a.blue-btn {
+    position: relative;
+}
+
+a.blue-btn:after {
+    position: absolute;
+    content: '';
+    border: 1px solid #b7974b;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    transition: .4s;
+    opacity: 0;
+}
+
+a.blue-btn:hover:after {
+    width: 108%;
+    height: 124%;
+    left: -9px;
+    top: -7px;
+    bottom: 0;
+    opacity: 1;
+}
+
+/* BUTTON END */
+
+.building {
+    height: 495px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* ================== FOOTER CSS =========================*/
+.footer {
+    background: #202147;
+    padding-bottom: 80px;
+    padding-top: 90px;
+}
+
+.footer-menu {
+    padding: 100px 0;
+}
+
+.masonry-column {
+    padding: 0 1px;
+}
+
+.masonry-grid .thumbnail {
+    margin: 5px 1px;
+}
+
+.row.masonry-grid div {
+    margin: 10px 0;
+    display: block;
+    padding: 4px;
+}
+
+.col-md-6.col-lg-4.masonry-column img {
+    width: 100%;
+}
+
+a.thumbnail {
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+
+
+
+.footer-menu a {
+    font-size: 20px;
+    color: #c9a55f;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 10px;
+}
+
+.footer-social ul li {
+    display: inline;
+}
+
+.footer-social li a {
+    color: #c9a55f;
+    display: inline-block;
+    height: 35px;
+    width: 35px;
+    border: 1px solid;
+    line-height: 35px;
+    border-radius: 10px;
+    margin: 0 4px;
+    transition: .3s;
+}
+
+
+a.theme-btn {
+    background: #b7974b;
+    width: auto;
+    display: inline-block;
+    line-height: 1;
+    text-align: center;
+    color: #fff;
+    padding: 20px 50px;
+    text-transform: uppercase;
+}
+
+a.theme-btn span {
+    position: relative;
+    display: inline-block;
+}
+
+a.theme-btn span:after {
+    position: absolute;
+    content: '';
+    height: 35px;
+    width: 1px;
+    right: -65px;
+    background: #c9a55f;
+    top: -10px;
+    transition: .4s;
+}
+
+a.theme-btn span:before {
+    position: absolute;
+    content: '';
+    height: 35px;
+    width: 1px;
+    left: -65px;
+    background: #c9a55f;
+    top: -10px;
+    transition: .4s;
+}
+
+a.theme-btn:hover span:after {
+    right: -30px;
+    background: #1B274C;
+}
+
+a.theme-btn:hover span:before {
+    left: -30px;
+    background: #1B274C;
+}
+
+a.theme-btn {
+    position: relative;
+}
+
+a.theme-btn:after {
+    position: absolute;
+    content: '';
+    border: 1px solid #b7974b;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    transition: .4s;
+    opacity: 0;
+}
+
+a.theme-btn:hover:after {
+    width: 105%;
+    height: 124%;
+    left: -9px;
+    top: -8px;
+    bottom: 0;
+    opacity: 1;
+}
+
+
+
+
+.instagram {
+    position: relative;
+    overflow: hidden;
+}
+
+.hover-text h3 {
+    font-size: 28px;
+}
+
+.hover-text {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    left: 0;
+    color: #fff;
+    transform: translateY(-50%);
+    text-align: center;
+    font-size: 30px;
+    z-index: 2;
+    transition: .5s;
+    opacity: 0;
+}
+.instagram:hover .hover-text{
+    opacity: 1;
+}
+.instagram:after {
+    position: absolute;
+    content: '';
+    left: 30px;
+    right: 30px;
+    top: 30px;
+    bottom: 30px;
+    background: #000;
+    border-radius: 10px;
+    opacity: 0;
+    transition: .3s;
+    transform: scaleX(0);
+}
+.instagram:hover:after{
+    transform: scaleX(1);
+    opacity: 1;
+}
+.instagram:before {
+    content: '';
+    left: 40px;
+    right: 40px;
+    top: 40px;
+    bottom: 40px;
+    border: 2px solid #fff;
+    position: absolute;
+    z-index: 2;
+    opacity: 0;
+    transition: .5s;
+}
+.instagram:hover:before{
+    opacity: 1;
+}
