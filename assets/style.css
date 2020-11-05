@@ -6,6 +6,24 @@
    6) FOOTER CSS
 
 */
+@font-face {
+    font-family: 'Gotham';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Gotham'), url('./Gotham-Light.otf') format('truetype');
+}
+@font-face {
+    font-family: 'GothamBlack';
+    font-style: normal;
+    font-weight: normal;
+    src: local('GothamBlack'), url('./Gotham-Black.otf') format('truetype');
+}
+@font-face {
+    font-family: 'Gothambold';
+    font-style: normal;
+    font-weight: bold;
+    src: local('Gothambold'), url('./GothamBold.ttf') format('truetype');
+}
 html{
     cursor: none;
     overflow-x: hidden;
@@ -14,6 +32,9 @@ body {
     font-family: 'Gotham';
     font-size: 18px;
 
+}
+a{
+    font-family: 'Gotham';
 }
 :focus{
     outline: none!important;
@@ -47,10 +68,10 @@ body {
     position: absolute;
     top: 0;
     left: 0;
-    font-size: 2px;
+    font-size: 1.5px;
     text-align: center;
     color: #fff;
-    line-height: 8px;
+    line-height: 7.5px;
     display: block;
     background-position: center;
     background-repeat: no-repeat;
@@ -61,12 +82,13 @@ body {
 
 .cursor.active {
     opacity: 1;
-    transform: scale(12);
+    transform: scale(10);
 }
 
 .cursor.active::before {
     opacity: 1;
 }
+
 
 .cursor-follower {
     position: absolute;
@@ -84,10 +106,17 @@ body {
 
 .cursor-follower.active {
     opacity: 0.3;
-    transform: scale(0);
+    transform: scale(1);
 }
 
-
+a:hover{
+    cursor: none!important;
+   user-select: none;
+}
+button:hover{
+   cursor: none!important;
+   user-select: none;
+}
 
 
 
@@ -138,8 +167,8 @@ a {
     text-transform: uppercase;
 }
 .section-title img {
-    width: 510px;
-    height: 638px;
+    width: 475px;
+    height: 405px;
 }
 
 .section-title span {
@@ -157,29 +186,36 @@ a.navbar-brand img {
 }
 
 a.top-shop {
-    padding: 25px 30px;
+    padding: 10px 35px;
     right: 0;
-    top: 2px;
+    top: 14px;
     position: absolute;
     border-top-left-radius: 50px;
     border-bottom-left-radius: 50px;
-    font-size: 20px;
+    font-size: 15px;
+}
+a.nav-link {
+    font-size: 13px;
+    display: block;
+    width: 88px;
+    text-align: center;
+    text-transform: uppercase;
 }
 
 .top-search {
     position: absolute;
-    right: 340px;
-    top: 10px;
+    right: 252px;
+    top: 16px;
 }
 
 .top-search input {
     border-radius: 50px;
     border: 1px solid #b7974b;
-    height: 65px;
+    height: 40px;
     width: 260px;
     color: #fff;
     font-size: 20px;
-    padding-left: 55px;
+    padding-left: 30px;
     background: transparent;
 }
 
@@ -198,8 +234,8 @@ ul.navbar-nav li a {
 .text i {
     color: #b7974b;
     position: absolute;
-    left: 20px;
-    font-size: 25px;
+    left: 11px;
+    font-size: 15px;
     top: 50%;
     transform: translateY(-50%);
 }
@@ -223,18 +259,53 @@ nav.navbar.navbar-expand-lg.fixed-top.scrolled.show img {
     margin-bottom: -45px;
     transition: all .3s;
 }
+
+nav.navbar.scrolled.show ul.navbar-nav {
+    transition: all .4s;
+    margin-left: 20px!important;
+    margin-bottom: -50px;
+}
+
+nav.navbar.scrolled.show .top-search {
+    top: 30px;
+}
+nav.navbar.scrolled.show a.nav-link {
+    width: auto;
+}
+nav.navbar.scrolled.show .top-search input {
+    width: 40px;
+}
+
+nav.navbar.scrolled.show .top-shop {
+    top: 30px;
+}
+
+
+
 /* ================== HERO CSS =========================*/
 
 .wrapper.no-gutters {
-    height: 1000px;
+    min-height: 700px;
+    height: 100vh;
+    max-height: 900px;
 }
 
 .single-hero {
-    height: 1000px;
+    min-height: 700px;
+    height: 100vh;
+    max-height: 900px;
     background-size: cover;
     background-repeat: no-repeat;
 }
-
+.single-hero:after {
+    position: absolute;
+    content: '';
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: #00000059;
+}
 .hero-right {
     background: #202147;
     height: 100%;
@@ -243,44 +314,62 @@ nav.navbar.navbar-expand-lg.fixed-top.scrolled.show img {
 
 .slider-content {
     z-index: 99;
-    margin-top: 230px;
+    margin-top: 290px;
     padding: 0 40px;
+}
+.slider-content:after {
+    content: '';
+    position: absolute;
+    left: 40px;
+    width: 100px;
+    bottom: 30px;
+    border: 1px dashed #fff;
 }
 
 .slider-content h1 {
     font-family: 'Bebas Neue', cursive;
-    font-size: 75px;
-    line-height: 95px;
-    letter-spacing: 14px;
+    font-size: 50px;
+    line-height: 55px;
+    letter-spacing: 8px;
+    padding-right: 50px;
 }
 
 .slider-content a {
-    padding: 10px;
+    padding: 10px 2px;
+    font-size: 13px;
+    font-weight: 700;
+    font-family: 'Gothambold';
 }
 
 .slider-content a:hover {
     color: #B7974B;
 }
 
+
+
+
+
+
+
 /* ================== ABOUT CSS =========================*/
 
 .about-content {
-    margin-top: 180px;
+    margin-top: 110px;
 }
 
 .about-content h2 {
-    font-size: 32px;
-    font-weight: 700;
+    font-size: 22px;
+    font-family: 'Gothambold';
 }
 
 .about-content p {
-    color: #726e6d;
-    font-size: 32px;
+    font-size: 20px;
+    font-family: 'Gotham';
 }
 
 .about .section-title {
     left: 20px;
-    top: -177px;
+    top: -100px;
 }
 
 /* .about .section-title img {
@@ -288,7 +377,7 @@ nav.navbar.navbar-expand-lg.fixed-top.scrolled.show img {
     max-width: 500px;
 } */
 .about-video {
-    margin-top: 380px;
+    margin-top: 280px;
 }
 
 .about-video {
@@ -297,8 +386,8 @@ nav.navbar.navbar-expand-lg.fixed-top.scrolled.show img {
 
 .about-video .section-title {
     position: absolute;
-    left: 90%;
-    top: -185px;
+    left: 80%;
+    top: -138px;
 }
 
 /* .about-video .section-title img {
@@ -317,25 +406,26 @@ nav.navbar.navbar-expand-lg.fixed-top.scrolled.show img {
 
 .about-video .line {
     position: absolute;
-    right: 260px;
-    height: 355px;
+    right: 340px;
+    height: 340px;
     width: 3px;
     background: #b7974b;
-    top: 60px;
+    top: 20px;
 }
 
 .arrow {
-    margin-top: 110px;
-    margin-bottom: 70px;
+    margin: 70px 0;
 }
-
+.arrow img{
+    max-width: 80px;
+}
 /* ================== ABOUT CSS =========================*/
 .brand > h2 {
     color: #000;
-    font-size: 50px;
+    font-size: 35px;
     letter-spacing: 20px;
     margin-bottom: 70px;
-    font-weight: 500;
+    font-weight: bold;
 }
 
 
@@ -372,7 +462,7 @@ nav.navbar.navbar-expand-lg.fixed-top.scrolled.show img {
 .brand-two .line {
     position: absolute;
     left: 114%;
-    height: 400px;
+    height: 340px;
     width: 3px;
     background: #b7974b;
     top: 60px;
@@ -400,38 +490,50 @@ button.slick-arrow {
     color: #b7974b;
 }
 
+.about-video .section-title img {
+    width: 320px;
+    height: 290px;
+}
 
+.brand-two .section-title img {
+    width: 320px;
+    height: 290px;
+}
 /* ================== CATEGORIES CSS =========================*/
 section.categories .section-title {
-    top: -50px;
+    top: -85px;
 }
 
 .categories {
-    padding-top: 210px;
+    padding-top: 170px;
 }
 
 li.single-list h3 {
-    font-size: 48px;
-    color: #797675;
-    line-height: 40px;
+    font-size: 30px;
+    color: rgb(121, 118, 117);
+    line-height: 30px;
     font-weight: 500;
 }
 
 li.single-list {
-    margin-bottom: 50px;
+    margin-bottom: 30px;
 }
 
 li.single-list p {
     color: #797675;
-    line-height: 24px;
-    font-weight: 500;
+    line-height: 20px;
+    font-weight: bold;
+    font-size: 15px;
+    padding-left: 20px;
+    margin-bottom: 0;
 }
 
 li.single-list a {
-    color: #252322;
-    font-size: 22px;
-    font-weight: 700;
-    padding: 10px;
+    color: rgb(37, 35, 34);
+    font-size: 9px;
+    font-size: 14px;
+    font-family: 'GothamBlack';
+    display: block;
 }
 
 .category-image {
@@ -439,11 +541,12 @@ li.single-list a {
 }
 
 .brand-text {
-    margin-top: 410px;
+    margin-top: 180px;
 }
 .brand-text h3 {
-    font-family: 'Salome';
-    font-size: 35px;
+    font-family: Salome;
+    font-size: 40px;
+    padding-right: 60px;
 }
 .catborder:before {
     position: absolute;
@@ -451,7 +554,7 @@ li.single-list a {
     height: 100%;
     left: -45px;
     background: #b7974b;
-    width: 5px;
+    width: 3px;
 }
 
 .category-image.m-negetive {
@@ -463,13 +566,14 @@ section.categories.position-relative h2 {
 /* BLUE BUTTON */
 
 a.blue-btn {
-    background: #1B274C;
+    background: rgb(27, 39, 76);
     padding: 12px 28px;
     width: 230px;
     display: block;
-    line-height: 1;
+    line-height: 18px;
+    font-size: 14px;
     text-align: center;
-    color: #fff;
+    color: rgb(255, 255, 255);
     text-transform: uppercase;
 }
 
@@ -523,14 +627,14 @@ a.blue-btn:after {
     left: 0;
     top: 0;
     bottom: 0;
-    transition: .4s;
+    transition: all .4s ease-in;
     opacity: 0;
 }
 
 a.blue-btn:hover:after {
     width: 108%;
     height: 124%;
-    left: -9px;
+    left: -8px;
     top: -7px;
     bottom: 0;
     opacity: 1;
@@ -539,21 +643,28 @@ a.blue-btn:hover:after {
 /* BUTTON END */
 
 .building {
-    height: 495px;
+    height: 285px;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
 }
 
+section.categories .section-title img {
+    width: 684px;
+    height: 185px;
+}
+img.categories-arrow {
+    max-width: 80px;
+}
 /* ================== FOOTER CSS =========================*/
 .footer {
     overflow: hidden;
-    padding-bottom: 80px;
-    padding-top: 90px;
+    padding-bottom: 45px;
+    padding-top: 60px;
 }
 
 .footer-menu {
-    padding: 100px 0;
+    padding: 40px 0;
 }
 
 .masonry-column {
@@ -567,7 +678,7 @@ a.blue-btn:hover:after {
 .row.masonry-grid div {
     margin: 10px 0;
     display: block;
-    padding: 4px;
+    padding: 15px;
 }
 
 .col-md-6.col-lg-4.masonry-column img {
@@ -583,7 +694,7 @@ a.thumbnail {
 
 
 .footer-menu a {
-    font-size: 20px;
+    font-size: 14px;
     color: #c9a55f;
     font-weight: 700;
     text-transform: uppercase;
@@ -612,8 +723,10 @@ a.theme-btn {
     background: #b7974b;
     width: auto;
     display: inline-block;
-    line-height: 1;
+    line-height: 14px;
+    font-size: 14px;
     text-align: center;
+    letter-spacing: 1px;
     color: #fff;
     padding: 20px 50px;
     text-transform: uppercase;
@@ -669,7 +782,7 @@ a.theme-btn:after {
     left: 0;
     top: 0;
     bottom: 0;
-    transition: .4s;
+    transition: all .4s ease-in-out;
     opacity: 0;
 }
 
@@ -677,7 +790,7 @@ a.theme-btn:hover:after {
     width: 105%;
     height: 124%;
     left: -9px;
-    top: -8px;
+    top: -6px;
     bottom: 0;
     opacity: 1;
 }
@@ -741,4 +854,9 @@ a.theme-btn:hover:after {
 }
 .instagram:hover:before{
     opacity: 1;
+}
+
+
+.instagram{
+    height: 400px;
 }

@@ -50,7 +50,10 @@ $(".category-image img").on("mouseleave", function() {
     cursor.removeClass("active");
     follower.removeClass("active");
 });
-
+$("a").on("mouseenter", function() {
+    cursor.addClass("link");
+    follower.addClass("link");
+});
 
 var lastScrollTop = 0;
 $(window).scroll(function(event){
@@ -58,7 +61,7 @@ $(window).scroll(function(event){
    if(st>150){
         $('.navbar').addClass('show')
     }
-  if(st>150){
+  if(st>50){
       $('.navbar').addClass('scrolled')
   }else{
     $('.navbar').removeClass('scrolled')
@@ -69,6 +72,17 @@ $(window).scroll(function(event){
    } else {
     $('.navbar').addClass('show')
    }
+
+
+//    about section title
+
+    if(st<200){
+        $('.aboutimg').addClass('d-none')
+    }else{
+        $('.aboutimg').removeClass('d-none')
+    }
+
+
    lastScrollTop = st;
 });
 
@@ -97,6 +111,7 @@ $('.hero-slider').slick({
     focusOnSelect: true,
     centerPadding: '0%',
   });
+
 
 
 
@@ -164,12 +179,9 @@ $('.arrow').paroller({
 
 //CTEGORIES AROOW
 $('.line').paroller({
-    factorXs: 0.1,
-    factorSm: 0.1,
-    factorMd: -0.1,
-    factorLg: -0.1,
-    factorXl: -0.1,
-    factor: 0.1,
+    factorXs: -0.2,
+    factorXl: -0.2,
+    factor: -0.1,
     type: 'foreground',
     direction: 'vertical',
     transition: 'translate 0.1s ease' 
@@ -180,10 +192,10 @@ $('.line').paroller({
 $('.section-title').paroller({
     factorXs: 0.1,
     factorSm: 0.1,
-    factorMd: -0.4,
-    factorLg: -0.5,
+    factorMd: 0.3,
+    factorLg: 0.3,
     factorXl: 0.1,
-    factor: -0.4,
+    factor: 0.1,
     type: 'foreground',
     direction: 'vertical'
     });
@@ -193,6 +205,7 @@ $('.section-title').paroller({
 // PAROLLER JS FOOTER
 $('.footer').paroller();
 $('.building').paroller();
+$('.instagram').paroller();
 
 
 
