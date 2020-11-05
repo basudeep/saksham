@@ -414,7 +414,7 @@ nav.navbar.scrolled.show .top-shop {
 }
 
 .arrow {
-    margin: 70px 0;
+    margin: 55px 0;
 }
 .arrow img{
     max-width: 80px;
@@ -430,7 +430,7 @@ nav.navbar.scrolled.show .top-shop {
 
 
 .brand-two {
-    padding: 250px 0;
+    padding: 150px 0;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -499,6 +499,12 @@ button.slick-arrow {
     width: 320px;
     height: 290px;
 }
+.single-box img {
+    height: 60px;
+    width: 163px;
+    margin-bottom: 20px;
+}
+
 /* ================== CATEGORIES CSS =========================*/
 section.categories .section-title {
     top: -85px;
@@ -660,7 +666,7 @@ img.categories-arrow {
 .footer {
     overflow: hidden;
     padding-bottom: 45px;
-    padding-top: 60px;
+    padding-top: 30px;
 }
 
 .footer-menu {
@@ -830,7 +836,7 @@ a.theme-btn:hover:after {
     right: 30px;
     top: 30px;
     bottom: 30px;
-    background: #000;
+    background: #e2bf6eb0;
     border-radius: 10px;
     opacity: 0;
     transition: .3s;
@@ -848,6 +854,7 @@ a.theme-btn:hover:after {
     bottom: 40px;
     border: 2px solid #fff;
     position: absolute;
+    border-radius: 10px;
     z-index: 2;
     opacity: 0;
     transition: .5s;

@@ -55,6 +55,9 @@ $("a").on("mouseenter", function() {
     follower.addClass("link");
 });
 
+
+
+//NAV BAR
 var lastScrollTop = 0;
 $(window).scroll(function(event){
    var st = $(this).scrollTop();
@@ -86,6 +89,8 @@ $(window).scroll(function(event){
    lastScrollTop = st;
 });
 
+
+//HERO SLIDER
 $('.hero-slider').slick({
     slidesToShow: 1,
     slidesToScroll: 1,
