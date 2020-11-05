@@ -504,6 +504,9 @@ button.slick-arrow {
     width: 163px;
     margin-bottom: 20px;
 }
+.single-brand img {
+    height: 85px;
+}
 
 /* ================== CATEGORIES CSS =========================*/
 section.categories .section-title {
