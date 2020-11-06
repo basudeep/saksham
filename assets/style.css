@@ -239,7 +239,7 @@ a.top-shop {
     font-size: 15px;
 }
 a.nav-link {
-    font-size: 12px;
+    font-size: 13px;
     display: inline-table;
     width: 60px;
     text-align: center;
@@ -312,6 +312,9 @@ nav.navbar.scrolled.show ul.navbar-nav {
 
 nav.navbar.scrolled.show .top-search {
     top: 30px;
+}
+nav.navbar.scrolled.show a.nav-link {
+    width: 80px;
 }
 
 nav.navbar.scrolled.show .top-search input {
