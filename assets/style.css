@@ -48,7 +48,7 @@ a{
 
 .cursor {
     position: absolute;
-    background: #202147;
+    background: #000;
     width: 8px;
     height: 8px;
     border-radius: 100%;
@@ -240,8 +240,8 @@ a.top-shop {
 }
 a.nav-link {
     font-size: 13px;
-    display: block;
-    width: 88px;
+    display: inline-table;
+    width: 78px;
     text-align: center;
     text-transform: uppercase;
 }
@@ -358,7 +358,7 @@ nav.navbar.scrolled.show .top-shop {
 
 .slider-content {
     z-index: 99;
-    margin-top: 290px;
+    margin-top: 280px;
     padding: 0 40px;
 }
 .slider-content:after {
@@ -366,7 +366,7 @@ nav.navbar.scrolled.show .top-shop {
     position: absolute;
     left: 40px;
     width: 100px;
-    bottom: 30px;
+    bottom: 50px;
     border: 1px dashed #fff;
 }
 
@@ -376,13 +376,19 @@ nav.navbar.scrolled.show .top-shop {
     line-height: 55px;
     letter-spacing: 8px;
     padding-right: 50px;
+    margin-bottom: 38px;
 }
 
 .slider-content a {
-    padding: 10px 2px;
     font-size: 13px;
+    display: inline-block;
     font-weight: 700;
-    font-family: 'Gothambold';
+    font-family: Gothambold;
+    padding-left: 8px;
+    padding-right: 2px;
+    padding-top: 2px;
+    line-height: 28px;
+    margin-left: -6px;
 }
 
 .slider-content a:hover {
@@ -398,7 +404,7 @@ nav.navbar.scrolled.show .top-shop {
 /* ================== ABOUT CSS =========================*/
 
 .about-content {
-    margin-top: 110px;
+    margin-top: 130px;
 }
 
 .about-content h2 {
@@ -407,7 +413,7 @@ nav.navbar.scrolled.show .top-shop {
 }
 
 .about-content p {
-    font-size: 20px;
+    font-size: 18px;
     font-family: 'Gotham';
 }
 
@@ -587,6 +593,8 @@ li.single-list a {
     font-size: 14px;
     font-family: 'GothamBlack';
     display: inline-block;
+    padding: 2px 0;
+    padding-left: 6px;
 }
 
 .category-image {
