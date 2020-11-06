@@ -1,6 +1,4 @@
 
-
-
 $(function() {
 
 
@@ -79,11 +77,11 @@ $(window).scroll(function(event){
 
 //    about section title
 
-    if(st<200){
-        $('.aboutimg').addClass('d-none')
-    }else{
-        $('.aboutimg').removeClass('d-none')
-    }
+    // if(st<200){
+    //     $('.aboutimg').addClass('d-none')
+    // }else{
+    //     $('.aboutimg').removeClass('d-none')
+    // }
 
 
    lastScrollTop = st;
@@ -123,7 +121,7 @@ $('.hero-slider').slick({
 //PORTFOLIO SLIDER
 
   $('.brand-active').slick({
-    slidesToShow: 3,
+    slidesToShow: 4,
     slidesToScroll: 1,
     dots: true,
     arrows:true,
@@ -197,9 +195,9 @@ $('.line').paroller({
 $('.section-title').paroller({
     factorXs: 0.1,
     factorSm: 0.1,
-    factorMd: 0.3,
-    factorLg: 0.3,
-    factorXl: 0.1,
+    factorMd: 0.1,
+    factorLg: 0.2,
+    factorXl: 0.2,
     factor: 0.1,
     type: 'foreground',
     direction: 'vertical'

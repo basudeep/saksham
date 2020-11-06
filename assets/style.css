@@ -85,6 +85,7 @@ a{
     transform: scale(10);
 }
 
+
 .cursor.active::before {
     opacity: 1;
 }
@@ -123,8 +124,8 @@ button:hover{
 .cursors {
     display: none;
     position: fixed;
-    top: 3px;
-    left: 3px;
+    top: 0px;
+    left: 0px;
     width: var(--width);
     height: var(--height);
     transform: translate(calc(var(--x) - var(--width) / 2), calc(var(--y) - var(--height) / 2));
@@ -140,7 +141,7 @@ button:hover{
   }
   @media (pointer: fine) {
     .cursors {
-      display: block;
+      display: inline-block;
     }
   }
   .cursors::after {
@@ -165,7 +166,6 @@ button:hover{
     transform: scale(0);
   }
   
-
 
 
 
@@ -239,9 +239,9 @@ a.top-shop {
     font-size: 15px;
 }
 a.nav-link {
-    font-size: 13px;
+    font-size: 12px;
     display: inline-table;
-    width: 78px;
+    width: 60px;
     text-align: center;
     text-transform: uppercase;
 }
@@ -313,9 +313,7 @@ nav.navbar.scrolled.show ul.navbar-nav {
 nav.navbar.scrolled.show .top-search {
     top: 30px;
 }
-nav.navbar.scrolled.show a.nav-link {
-    width: auto;
-}
+
 nav.navbar.scrolled.show .top-search input {
     width: 40px;
 }
@@ -384,10 +382,7 @@ nav.navbar.scrolled.show .top-shop {
     display: inline-block;
     font-weight: 700;
     font-family: Gothambold;
-    padding-left: 8px;
-    padding-right: 2px;
-    padding-top: 2px;
-    line-height: 28px;
+    padding: 5px;
     margin-left: -6px;
 }
 
@@ -402,7 +397,9 @@ nav.navbar.scrolled.show .top-shop {
 
 
 /* ================== ABOUT CSS =========================*/
-
+.about{
+    margin-top: 50px;
+}
 .about-content {
     margin-top: 130px;
 }
@@ -419,7 +416,8 @@ nav.navbar.scrolled.show .top-shop {
 
 .about .section-title {
     left: 20px;
-    top: -100px;
+    bottom: 100%;
+    top: -5%;
 }
 
 /* .about .section-title img {
@@ -437,7 +435,7 @@ nav.navbar.scrolled.show .top-shop {
 .about-video .section-title {
     position: absolute;
     left: 80%;
-    top: -138px;
+    top: -100px;
 }
 
 /* .about-video .section-title img {
@@ -457,8 +455,8 @@ nav.navbar.scrolled.show .top-shop {
 .about-video .line {
     position: absolute;
     right: 340px;
-    height: 340px;
-    width: 3px;
+    height: 450px;
+    width: 2px;
     background: #b7974b;
     top: 20px;
 }
@@ -512,8 +510,8 @@ nav.navbar.scrolled.show .top-shop {
 .brand-two .line {
     position: absolute;
     left: 114%;
-    height: 340px;
-    width: 3px;
+    height: 750px;
+    width: 2px;
     background: #b7974b;
     top: 60px;
 }
@@ -589,12 +587,10 @@ li.single-list p {
 
 li.single-list a {
     color: rgb(37, 35, 34);
-    font-size: 9px;
     font-size: 14px;
     font-family: 'GothamBlack';
     display: inline-block;
-    padding: 2px 0;
-    padding-left: 6px;
+    padding: 3px 5px;
 }
 
 .category-image {
@@ -920,5 +916,6 @@ a.theme-btn:hover:after {
 
 
 .instagram{
-    height: 400px;
+    height: 300px;
+    border-radius: 10px;
 }
