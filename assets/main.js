@@ -98,13 +98,13 @@ $('.hero-slider').slick({
     focusOnSelect: true,
     autoplay:true,
     autoplaySpeed: 5000,
-    asNavFor: '.hero-right',
+    asNavFor: '.icon-active',
     centerPadding: '0%',
     fade: true,
     cssEase: 'linear'
   });
 
-  $('.hero-right').slick({
+  $('.icon-active').slick({
     slidesToShow: 1,
     slidesToScroll: 1,
     asNavFor: '.hero-slider',
@@ -121,7 +121,7 @@ $('.hero-slider').slick({
 //PORTFOLIO SLIDER
 
   $('.brand-active').slick({
-    slidesToShow: 4,
+    slidesToShow: 5,
     slidesToScroll: 1,
     dots: true,
     arrows:true,
@@ -208,7 +208,7 @@ $('.section-title').paroller({
 // PAROLLER JS FOOTER
 $('.footer').paroller();
 $('.building').paroller();
-$('.instagram').paroller();
+// $('.instagram').paroller();
 
 
 

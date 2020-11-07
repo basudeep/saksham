@@ -46,6 +46,11 @@ a{
     src: local('Salome'), url('./Salome.otf') format('truetype');
   }
 
+
+
+
+/* CURSOR START */
+
 .cursor {
     position: absolute;
     background: #000;
@@ -163,11 +168,11 @@ button:hover{
   
   html:not(html:hover) .cursors::after {
     opacity: 0;
-    transform: scale(0);
+    transform: scale(1);
   }
   
 
-
+/* CURSOR END */
 
 
 
@@ -311,7 +316,8 @@ nav.navbar.scrolled.show ul.navbar-nav {
 }
 
 nav.navbar.scrolled.show .top-search {
-    top: 30px;
+    top: 35px;
+    right: 160px;
 }
 nav.navbar.scrolled.show a.nav-link {
     width: 80px;
@@ -322,9 +328,13 @@ nav.navbar.scrolled.show .top-search input {
 }
 
 nav.navbar.scrolled.show .top-shop {
-    top: 30px;
+    top: 35px;
+    padding: 10px 10px;
+    font-size: 12px;
 }
-
+nav.navbar.navbar-expand-lg.fixed-top.scrolled.show a.nav-link{
+    width: auto;
+}
 
 
 /* ================== HERO CSS =========================*/
@@ -340,26 +350,45 @@ nav.navbar.scrolled.show .top-shop {
     height: 100vh;
     max-height: 900px;
     background-size: cover;
-    background-repeat: no-repeat;
+    background-position: center;
 }
-.single-hero:after {
+
+.slider-icon {
+    width: 300px;
+    margin: 0 auto;
+    text-align: center;
+}
+.borderline {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 2px dashed #fff;
     position: absolute;
-    content: '';
     left: 0;
     right: 0;
-    top: 0;
-    bottom: 0;
-    background: #00000059;
+    margin: 0 auto;
+    bottom: -120px;
 }
-.hero-right {
-    background: #202147;
-    height: 100%;
-    border-left: 10px solid #B7974B;
+.single-icon img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    padding: 3px;
 }
+.icon-active.circle {
+    border: 2px solid #fff;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin: 0 auto;
+    margin-top: -20px;
+    overflow: hidden;
+}
+
+
 
 .slider-content {
     z-index: 99;
-    margin-top: 280px;
     padding: 0 40px;
 }
 .slider-content:after {
@@ -367,8 +396,8 @@ nav.navbar.scrolled.show .top-shop {
     position: absolute;
     left: 40px;
     width: 100px;
-    bottom: 50px;
-    border: 1px dashed #fff;
+    bottom: 35px;
+    border-top: 1px dashed #fff;
 }
 
 .slider-content h1 {
@@ -377,7 +406,7 @@ nav.navbar.scrolled.show .top-shop {
     line-height: 55px;
     letter-spacing: 8px;
     padding-right: 50px;
-    margin-bottom: 38px;
+    margin-bottom: 15px;
 }
 
 .slider-content a {
@@ -404,7 +433,7 @@ nav.navbar.scrolled.show .top-shop {
     margin-top: 50px;
 }
 .about-content {
-    margin-top: 130px;
+    margin-top: 155px;
 }
 
 .about-content h2 {
@@ -438,7 +467,7 @@ nav.navbar.scrolled.show .top-shop {
 .about-video .section-title {
     position: absolute;
     left: 80%;
-    top: -100px;
+    top: -220px;
 }
 
 /* .about-video .section-title img {
@@ -461,7 +490,7 @@ nav.navbar.scrolled.show .top-shop {
     height: 450px;
     width: 2px;
     background: #b7974b;
-    top: 20px;
+    top: 100px;
 }
 
 .arrow {
@@ -516,7 +545,7 @@ nav.navbar.scrolled.show .top-shop {
     height: 750px;
     width: 2px;
     background: #b7974b;
-    top: 60px;
+    top: 150px;
 }
 
 
@@ -551,8 +580,6 @@ button.slick-arrow {
     height: 290px;
 }
 .single-box img {
-    height: 60px;
-    width: 163px;
     margin-bottom: 20px;
 }
 .single-brand img {
@@ -561,7 +588,7 @@ button.slick-arrow {
 
 /* ================== CATEGORIES CSS =========================*/
 section.categories .section-title {
-    top: -85px;
+    top: -100px;
 }
 
 .categories {
@@ -612,7 +639,7 @@ li.single-list a {
     position: absolute;
     content: '';
     height: 100%;
-    left: -45px;
+    left: -60px;
     background: #b7974b;
     width: 3px;
 }
@@ -921,4 +948,28 @@ a.theme-btn:hover:after {
 .instagram{
     height: 300px;
     border-radius: 10px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
+
+.hover-text h3 {
+    font-size: 15px;
+    transition: .4;
+}
+.footer-social li a:hover {
+    color: #fff;
+    transition: .4s;
+}
+.hover-text i {
+    font-size: 20px;
+    transition: .4;
+}
+.hover-text h3:hover {
+    color: #000;
+}
+.hover-text i:hover {
+    color: #000;
+    
+}
+
